@@ -56,7 +56,7 @@ Use the following notebooks to run the analyses and reproduce the main and suppl
 
 | Figure Numbers |            Script Name            |                               Description                               | 
 |:--------------:|:---------------------------------:|:-----------------------------------------------------------------------:|
-|       1        |      plot_nerc_regions.ipynb      |                Plots the TPL-008-1 standard NERC regions                |
+|       1        |      plot_nerc_regions.ipynb      |             Plots the draft TPL-008-1 standard NERC regions             |
 |     2,3,4      | plot_hw_cs_characteristics.ipynb  |              Plots heat wave and cold snap characteristics              |
 |      5,8       |   plot_annual_generation.ipynb    | Plots the distributinon of demand and generation by type for each month |
 |       6        |      plot_case_studies.ipynb      |  Plots key stress metrics and the generation mix for the case studies   |
