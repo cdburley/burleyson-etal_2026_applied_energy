@@ -1,4 +1,4 @@
-# Characterizing Diversity in Heat Wave and Cold Snap Responses for Assessing Grid Reliability
+# Characterizing Diversity in Heat Wave Responses for Assessing Grid Reliability
 
 Casey D. Burleyson<sup>1\*</sup>, Nathalie Voisin<sup>1,2</sup>, Osten Anderson<sup>1</sup>, Heng Wan<sup>1</sup>, and Cameron Bracken<sup>1</sup> 
 
@@ -8,25 +8,25 @@ Casey D. Burleyson<sup>1\*</sup>, Nathalie Voisin<sup>1,2</sup>, Osten Anderson<
 \* corresponding author: casey.burleyson@pnnl.gov
 
 ## Abstract
-EExtreme weather events such as heat waves and cold snaps stress electric grids. Reliability assurance practices 
+Extreme weather events such as heat waves and cold snaps stress electric grids. Reliability assurance practices 
 increasingly call for the utilization of historical events to “stress test” existing or projected infrastructure to 
 demonstrate reliability or to evaluate the financial feasibility of proposed grid enhancements. There is, however, a 
 lack of guidance on how to select those events. To inform those studies, we develop a benchmark of western United 
 States (U.S.) grid responses to 38 years of coincident 2032-level weather-sensitive hourly load, wind, and solar time 
 series along with weekly hydropower using the industry-vetted 2032 Anchor Data Set formulated by the U.S. Western 
-Electricity Coordinating Council. We evaluate how events from regional libraries of heat waves and cold snaps across 15 
-NERC subregions in the U.S. translated into diverse grid responses. Commonly used methods for ranking events by 
-temperature or regional load during the event do not translate to high rankings for other stress metrics such as prices 
-or the dependence on imported power. We further illustrate the challenge with three case studies demonstrating that 
-events with similar regional temperatures and peak loads can produce fundamentally different operational outcomes 
-depending on seasonal renewable resource availability, spatial extent, and event duration. This paper demonstrates how 
-strategically selecting diverse events can enable more robust assessments of transmission needs, storage sizing and 
-operations, and resource adequacy during heat waves and cold snaps. More work is needed to define stressful conditions 
-for different planning applications and to inform emerging regulatory requirements.
+Electricity Coordinating Council. We evaluate how events from regional libraries of heat waves in the U.S. translated 
+into diverse grid responses. Commonly used methods for ranking events by temperature or regional load during the event 
+do not translate to high rankings for other stress metrics such as prices or the dependence on imported power. We 
+further illustrate the challenge with three case studies demonstrating that events with similar regional temperatures 
+and peak loads can produce fundamentally different operational outcomes depending on seasonal renewable resource 
+availability, spatial extent, and event duration. This paper demonstrates the challenges of selecting appropriate 
+events that enable robust assessments of transmission needs, storage sizing and operations, and resource adequacy 
+during heat waves. The findings highlight the need for more work on creating application-specific frameworks for 
+selecting stress events.
 
 ## Journal reference
 Burleyson, C.D., N. Voisin, O. Anderson, H. Wan, and C. Bracken (2026). Characterizing diversity in heat wave and cold
-snap responses for assessing grid reliability. Submitted to *Applied Energy* - May 2026.
+snap responses for assessing grid reliability. In revision in *Applied Energy* - October 2026.
 
 ## Code reference
 Burleyson, C.D., N. Voisin, O. Anderson, H. Wan, and C. Bracken (2026). Supporting code for Burleyson et al. 2026 - 
@@ -37,28 +37,29 @@ Applied Energy [Code]. Zenodo. DOI TBD.
 The data needed to reproduce this analysis is stored in the public data repository linked below.
 | Dataset | Repository Link | DOI |
 |:-------:|:---------------:|:---:|
-| Supporting data for Burleyson et al. 2026 - Applied Energy | https://zenodo.org/records/20313919 | https://doi.org/10.5281/zenodo.20313919 |
+| Supporting data for Burleyson et al. 2026 - Applied Energy | https://zenodo.org/records/23024498 | https://doi.org/10.5281/zenodo.23024498 |
 
 ## Reproduce my experiment
 The following scripts pre-process the data in preparation for the analysis notebooks. They assume that you have the output
 from the heat wave and cold snap identification workflow as well as the GridView simulations stored locally. Those files 
-can be downloaded from the "Input and output Data" links listed above.
+can be downloaded from the "Input and output Data" links listed above. Set the data input directory using the .yml 
+configuration file to point these notebooks at the proper data directory.
 
 |                Script Name                 |                                                 Description                                                 |
 |:------------------------------------------:|:-----------------------------------------------------------------------------------------------------------:|
 |       process_temperature_data.ipynb       |              Cleans up the raw time series of daily temperature in each NERC TPL-008-1 region.              |
 |   process_integrated_time_series.ipynb     |  Aggregates the temperature, load, and generation data into a single file for each NERC TPL-008-1 region.   |
 |       process_hw_cs_libraries.ipynb        | Cleans up the raw thermal events library and adds information about loads and generation during each event. |
- 
+
 ## Reproduce my figures
 Use the following notebooks to run the analyses and reproduce the main and supplementary figures used in this publication.
 
 | Figure Numbers |            Script Name            |                               Description                               | 
 |:--------------:|:---------------------------------:|:-----------------------------------------------------------------------:|
 |       1        |      plot_nerc_regions.ipynb      |                Plots the TPL-008-1 standard NERC regions                |
-|    2,3,4,5     | plot_hw_cs_characteristics.ipynb  |              Plots heat wave and cold snap characteristics              |
-|      6,9       |   plot_annual_generation.ipynb    | Plots the distributinon of demand and generation by type for each month |
-|       7        |      plot_case_studies.ipynb      |  Plots key stress metrics and the generation mix for the case studies   |
-|       8        | plot_event_temperature_maps.ipynb |      Plots maps of the event maximum temperature for a given event      |
+|     2,3,4      | plot_hw_cs_characteristics.ipynb  |              Plots heat wave and cold snap characteristics              |
+|      5,8       |   plot_annual_generation.ipynb    | Plots the distributinon of demand and generation by type for each month |
+|       6        |      plot_case_studies.ipynb      |  Plots key stress metrics and the generation mix for the case studies   |
+|       7        | plot_event_temperature_maps.ipynb |      Plots maps of the event maximum temperature for a given event      |
 |       SI       |   plot_event_time_series.ipynb    |        Plots time series of the grid response for a given event         |
 |       SI       |   plot_hw_cs_correlations.ipynb   |  Plots correlation between variables for all heat waves or cold snaps   |
