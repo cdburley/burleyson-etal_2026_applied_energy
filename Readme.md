@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1089013851.svg)](https://doi.org/10.5281/zenodo.23091918)
+
 # Characterizing Diversity in Heat Wave Responses for Assessing Grid Reliability
 
 Casey D. Burleyson<sup>1\*</sup>, Nathalie Voisin<sup>1,2</sup>, Osten Anderson<sup>1</sup>, Heng Wan<sup>1</sup>, and Cameron Bracken<sup>1</sup> 
@@ -30,7 +32,7 @@ for assessing grid reliability. In revision in *Applied Energy* - October 2026.
 
 ## Code reference
 Burleyson, C.D., N. Voisin, O. Anderson, H. Wan, and C. Bracken (2026). Supporting code for Burleyson et al. 2026 - 
-Applied Energy [Code]. Zenodo. DOI TBD.
+Applied Energy [Code]. Zenodo. https://doi.org/10.5281/zenodo.23091918.
 
 ## Data references
 ### Input and output data
