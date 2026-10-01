@@ -25,8 +25,8 @@ during heat waves. The findings highlight the need for more work on creating app
 selecting stress events.
 
 ## Journal reference
-Burleyson, C.D., N. Voisin, O. Anderson, H. Wan, and C. Bracken (2026). Characterizing diversity in heat wave and cold
-snap responses for assessing grid reliability. In revision in *Applied Energy* - October 2026.
+Burleyson, C.D., N. Voisin, O. Anderson, H. Wan, and C. Bracken (2026). Characterizing diversity in heat wave responses 
+for assessing grid reliability. In revision in *Applied Energy* - October 2026.
 
 ## Code reference
 Burleyson, C.D., N. Voisin, O. Anderson, H. Wan, and C. Bracken (2026). Supporting code for Burleyson et al. 2026 - 
@@ -62,4 +62,3 @@ Use the following notebooks to run the analyses and reproduce the main and suppl
 |       6        |      plot_case_studies.ipynb      |  Plots key stress metrics and the generation mix for the case studies   |
 |       7        | plot_event_temperature_maps.ipynb |      Plots maps of the event maximum temperature for a given event      |
 |       SI       |   plot_event_time_series.ipynb    |        Plots time series of the grid response for a given event         |
-|       SI       |   plot_hw_cs_correlations.ipynb   |  Plots correlation between variables for all heat waves or cold snaps   |
